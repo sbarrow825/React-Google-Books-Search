@@ -1,0 +1,4 @@
+export const REMOVE_BOOK = "REMOVE_BOOK";
+export const SAVE_BOOK = "SAVE_BOOK";
+export const UPDATE_BOOKS = "UPDATE_BOOKS";
+export const UPDATE_CURRENT_BOOK = "UPDATE_CURRENT_BOOK";

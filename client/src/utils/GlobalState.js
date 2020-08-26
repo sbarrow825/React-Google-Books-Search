@@ -18,11 +18,15 @@ const reducer = (state, action) => {
                 savedBooks: [action.book, ...state.savedBooks]
             }
         case REMOVE_BOOK:
+            const books = [];
+            for (const book of state.books) {
+                if (book !== action.book) {
+                    books.push(book)
+                }
+            }
             return {
                 ...state,
-                savedBooks: state.savedBooks.filter((book) => {
-                    return book._id !== action._id;
-                })
+                savedBooks: books
             }
         case UPDATE_SAVED_BOOKS:
             return {

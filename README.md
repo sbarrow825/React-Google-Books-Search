@@ -1,24 +1,31 @@
-# Google Books
+# React Google Books Search
+
+## Deployed Link
+
+To use the app, navigate to the deployed link on heroku found [here](https://immense-everglades-13293.herokuapp.com/)
+
+## Description
+
+![picture of application](assets/overview.png)
 
 This application allows users to utilize the vast array of data held by google books to search and save for books of interest. After querying books by title or author, users can sift through and save results, creating a list of saved books to be read in the future.
 
 This application is a Mongoose-Express-React-Node (MERN) full-stack application. On the back-end, an express server listens for requests, and interacts with the mongodb database or the google books API to serve the user with results. React's stateful nature facilitates a clean and simple setup of the DOM which is dynamic and responsive to the user input.
 
+## Table of Contents
 
-## Contents
-
-* [Installing](#installing)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
 * [Built With](#built-with)
-* [Application Functionality](#application-functionality)
-* [Deployed Application](https://immense-everglades-13293.herokuapp.com/)
-* [Developer Information](#gabriel-sucich)
+* [Questions](#Questions)
 
-## Installing
+## Installation
 
 To access code for use or development, clone the Github repository onto your local machine using:
 
 ```
-git clone https://github.com/GabeSucich/GoogleBooksReact.git
+git clone https://github.com/sbarrow825/React-Google-Books-Search
 ```
 
 To download the necessary dependencies, navigate into the cloned directory and enter the following in terminal:
@@ -32,6 +39,26 @@ To being running the react app on your local machine, navigate into the cloned r
 npm start
 ``` 
 
+## Usage
+
+On the 'Search' page, users can:
+
+* Search for new books, a feature which utilizes the google books API.
+* View the search results enlarged on the section at the page's top.
+* Save any of the search results.
+
+![gif of search page functionality](assets/search.gif)
+
+On the 'Saved' page, users can:
+
+* View any saved books enlarged at the top of the page.
+* Delete books from the saved page
+
+![gif of save page functionality](assets/save.gif)
+
+## License
+
+![MIT License](https://img.shields.io/npm/l/inquirer)
 
 ## Built With
 
@@ -41,30 +68,10 @@ npm start
 * [Bootstrap](https://getbootstrap.com/)
 * [React](https://reactjs.org/)
 
-## Application Functionality
 
-On the 'Search' page, users can:
+## Questions
 
-* Search for new books, a feature which utilizes the google books API.
-* View the search results enlarged on the section at the page's top.
-* Save any of the search results.
+![Github Profile Picture](https://github.com/sbarrow825.png)
 
-On the 'Saved' pgae, users can:
+For any questions concerning this project, please feel free to email me at sbarrow825@berkeley.edu
 
-* View any saved books enlarged at the top of the page.
-* Delete books from the saved page
-
-
-<img src="markdown/app.gif" width="85%">
-
-#### See the [deployed link](https://immense-everglades-13293.herokuapp.com/) here
-
-***
-
-### Gabriel Sucich
-
-<img src="markdown/profile.png" width="35%">
-
-- [Portfolio](https://gabesucich.github.io/Portfolio2/)
-- [Github](https://github.com/GabeSucich)
-- [LinkedIn](www.linkedin.com/in/gabriel-sucich-6a28a71a8)

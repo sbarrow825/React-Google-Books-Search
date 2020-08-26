@@ -1,9 +1,9 @@
 const express = require("express");
+const mongoose = require("mongoose")
 const path = require("path");
-const mongoose = require("mongoose");
-const routes = require("./routes");
-const app = express();
 const PORT = process.env.PORT || 3001;
+const app = express();
+const routes = require("./routes")
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -18,13 +18,13 @@ mongoose.connect(
   { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
 );
 
-app.use(routes);
+app.use(routes)
 
+// Define any API routes before this runs
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-// Start the API server
-app.listen(PORT, function() {
-  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+app.listen(PORT, () => {
+  console.log(`🌎 ==> API server now on port ${PORT}!`);
 });

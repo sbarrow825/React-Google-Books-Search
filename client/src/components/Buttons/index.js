@@ -1,9 +1,11 @@
 import React from 'react'
+import "./style.css"
 import API from "../../utils/API"
-import { SAVE_BOOK, UPDATE_CURRENT_BOOK, UPDATE_SAVED_BOOKS, REMOVE_BOOK } from "../../utils/actions"
+import { ADD_BOOK, SET_CURRENT_BOOK, UPDATE_BOOKS, REMOVE_BOOK } from "../../utils/action"
 import Row from "../Row"
 import Col from "../Col"
 import { useBookContext } from "../../utils/GlobalState"
+import { PromiseProvider } from 'mongoose'
 
 export function ViewButton(props) {
 
@@ -11,7 +13,7 @@ export function ViewButton(props) {
 
     const handleViewClick = book => {
 
-        dispatch({ type: UPDATE_CURRENT_BOOK, currentBook: book })
+        dispatch({ type: SET_CURRENT_BOOK, book: book })
     }
 
     return (
@@ -27,7 +29,7 @@ export function SaveButton(props) {
     const handleSaveClick = book => {
 
         API.saveBook({ title: book.title, authors: book.authors, description: book.description, src: book.imageLinks.smallThumbnail }).then(response => {
-            dispatch({ type: SAVE_BOOK, book: book })
+            dispatch({ type: ADD_BOOK, book: book })
         })
     }
 
@@ -94,3 +96,4 @@ export function SearchButtons(props) {
         </Row>
     )
 }
+

@@ -10,8 +10,8 @@ const BookSchema = new Schema({
 
     },
 
-    author: {
-        type: String,
+    authors: {
+        type: Array,
         require: true
 
     },
@@ -21,7 +21,7 @@ const BookSchema = new Schema({
         require: true
 
     },
-
+    
     src: String
 })
 

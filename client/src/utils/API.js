@@ -18,6 +18,10 @@ export default {
     },
 
     searchBooks(title) {
-        return axios.get("/google/books/" + title)
+        return axios.get("/google/newbooks/" + title)
     }
 }
+
+//searchBooks(title).then(books => {
+//  books.map(book => <ListItem book={book}/>)
+//})

@@ -1,19 +1,23 @@
-import React, { useEffect } from "react"
+import React, { useEffect, c } from 'react'
 import { useBookContext } from "../../utils/GlobalState"
-import { UPDATE_SAVED_BOOKS } from "../../utils/actions"
+import { UPDATE_BOOKS, SET_CURRENT_BOOK, CLEAR_SEARCHES } from "../../utils/action"
 import Jumbotron from "../../components/Jumbotron"
-import BookList from "../../components/BookList"
 import API from "../../utils/API"
+import BookList from '../../components/BookList'
 
-function SavedPage() {
+function Saved() {
 
-    const [state, dispatch] = useBookContext();
+    const [state, dispatch] = useBookContext()
 
-    useEffect(() => {
-        API.getBooks().then(res => {
-            dispatch({type: UPDATE_SAVED_BOOKS, savedBooks: res.data})
+    const loadBooks = () => {
+        API.getBooks().then(response => {
+            dispatch({ type: UPDATE_BOOKS, books: response.data })
+            console.log(response.data)
         })
-    }, [])
+    }
+
+    useEffect( loadBooks, [] )
+
 
     return (
         <div>
@@ -21,6 +25,8 @@ function SavedPage() {
             <BookList />
         </div>
     )
+
+
 }
 
-export default SavedPage
+export default Saved

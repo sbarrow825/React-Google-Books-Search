@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
+import "./style.css"
 import { useBookContext } from "../../utils/GlobalState"
-import { UPDATE_SEARCH_RESULTS } from "../../utils/actions"
+import { NEW_QUERY } from "../../utils/action"
 import API from '../../utils/API'
 
 function SearchBar() {
@@ -17,7 +18,7 @@ function SearchBar() {
                 books.push(book.volumeInfo)
             }
 
-            dispatch({ type: UPDATE_SEARCH_RESULTS, searchResults: books })
+            dispatch({ type: NEW_QUERY, results: books })
         })
     }
 

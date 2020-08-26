@@ -1,10 +1,11 @@
-import React from 'react'
-import {useBookContext} from "../../utils/GlobalState"
+import React, {useContext} from 'react'
+import {UseBookContext} from "../../utils/GlobalState"
 import Jumbotron from "../../components/Jumbotron"
 import SearchBar from "../../components/SearchBar"
 import BookList from "../../components/BookList"
 
-function SearchPage() {
+function Search() {
+    
     return (
         <div>
             <Jumbotron/>
@@ -14,4 +15,4 @@ function SearchPage() {
     )
 }
 
-export default SearchPage
+export default Search

@@ -1,4 +1,5 @@
 import React from 'react'
+import './style.css'
 import { useBookContext } from "../../utils/GlobalState"
 import Col from "../Col"
 import Row from "../Row"
@@ -68,7 +69,7 @@ function BookList() {
         return (
             <div className="mt-3">
                 
-                    {state.books.length > 0 ? <Row> {state.books.map(book => {
+                    {state.books.length > 0 ? <Row attributes="divider-row"> {state.books.map(book => {
                         return <BookListItem key={state.books.indexOf(book)} book={book} /> }
                     )} </Row> : <p className="text-center title-text larger-text">You haven't saved any books yet!</p>}
 
@@ -79,7 +80,7 @@ function BookList() {
     else {
         return (
             <div className="mt-3">
-                <Row>
+                <Row attributes="divider-row">
                     {state.searchResults ? state.searchResults.map(book => {
                         return <BookListItem book={book} />
                     }) : ""}

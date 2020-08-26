@@ -1,0 +1,27 @@
+.no-bullet {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+}
+
+.list-img {
+    width: 80%;
+    margin-left: 15%;
+}
+
+.book-item {
+ 
+    padding: 2%;
+
+    height: 230px;
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+
+.title-text {
+    font-family: 'Sniglet', cursive;
+}
+
+.larger-text {
+    font-size: x-large
+}

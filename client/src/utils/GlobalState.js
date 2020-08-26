@@ -2,8 +2,9 @@ import React, { createContext, useReducer, useContext } from "react";
 import {
     SAVE_BOOK,
     REMOVE_BOOK,
-    UPDATE_BOOKS,
-    UPDATE_CURRENT_BOOK
+    UPDATE_SAVED_BOOKS,
+    UPDATE_CURRENT_BOOK,
+    UPDATE_SEARCH_RESULTS
 } from "./actions";
 
 const BookContext = createContext();
@@ -23,14 +24,20 @@ const reducer = (state, action) => {
                     return book._id !== action._id;
                 })
             }
-        case UPDATE_BOOKS:
+        case UPDATE_SAVED_BOOKS:
             return {
                 ...state,
                 savedBooks: action.savedBooks
             }
         case UPDATE_CURRENT_BOOK:
             return {
+                ...state,
                 currentBook: action.currentBook
+            }
+        case UPDATE_SEARCH_RESULTS:
+            return {
+                ...state,
+                searchResults: action.searchResults
             }
         default:
             return state
@@ -47,7 +54,8 @@ const BookProvider = () => {
             description: "",
             image: "",
             link: ""
-        }
+        },
+        searchResults: null
     });
 
     return <Provider value={[state, dispatch]} />

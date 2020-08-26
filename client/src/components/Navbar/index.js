@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { useBookContext } from "../../utils/GlobalState"
 import { UPDATE_SEARCH_RESULTS } from "../../utils/actions"
 
@@ -19,7 +18,7 @@ function Navbar() {
                         <a href="/search" className="nav-link font-weight-bold title-text" onClick={clearSearches}>Search for Books</a>
                     </li>
                     <li className="nav-item active">
-                        <a href="/saved" className="nav-link font-weight-bold title-text" onClick={clearSearches}>Saved Books</a>
+                        <a href="/saved" className="nav-link font-weight-bold title-text">Saved Books</a>
                     </li>
                 </ul>
         </nav>

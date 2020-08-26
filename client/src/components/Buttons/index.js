@@ -1,6 +1,6 @@
 import React from 'react'
 import API from "../../utils/API"
-import { SAVE_BOOK, UPDATE_CURRENT_BOOK, UPDATE_SAVED_BOOKS, REMOVE_BOOK } from "../../utils/action"
+import { SAVE_BOOK, UPDATE_CURRENT_BOOK, UPDATE_SAVED_BOOKS, REMOVE_BOOK } from "../../utils/actions"
 import Row from "../Row"
 import Col from "../Col"
 import { useBookContext } from "../../utils/GlobalState"

@@ -7,8 +7,7 @@ router.route("/")
   .post(BooksController.create);
 
 // Matches with "/api/books/:id"
-router
-  .route("/:id")
+router.route("/:id")
   .get(BooksController.findOne)
   .delete(BooksController.remove);
 

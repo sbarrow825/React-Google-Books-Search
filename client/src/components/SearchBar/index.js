@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { useBookContext } from "../../utils/GlobalState"
-import { UPDATE_SEARCH_RESULTS } from "../../utils/action"
+import { UPDATE_SEARCH_RESULTS } from "../../utils/actions"
 import API from '../../utils/API'
 
 function SearchBar() {
